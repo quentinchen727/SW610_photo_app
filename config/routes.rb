@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'static_pages/music'
+
+  get 'static_pages/map'
+
+  get 'static_pages/about'
+
   resources :images
   devise_for :users, :controllers => { :registrations => 'registrations' }
   root 'welcome#index'
