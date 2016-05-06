@@ -35,8 +35,9 @@
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
     <%= javascript_include_tag "https://js.stripe.com/v2/" %>
     <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "clock" %>
   </head>
-  <body>
+  <body onload="initializeClock('clockdiv', deadline);">
 
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -45,13 +46,16 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
+        <div id="topicon">
         <span class="navbar-brand"><%= link_to "PhotoApp", "/" %></span>
+        <span id="tophide">Welcome to SWE610</span>
+        </div
         <div class="navbar-collapse collapse navbar-responsive-collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "images", "/images"  %></li>
-            <li><%= link_to "Link2", "/path2"  %></li>
-            <li><%= link_to "Link3", "/path3"  %></li>
-            <li><%= link_to "Link4", "/path4"  %></li>
+          <ul class="nav navbar-nav" id = "navbarlayout">
+            <li id = "nav_tab1"><%= link_to "images", "/images",  {class: 'nav_tab'} %></li>
+            <li id = "nav_tab2"><%= link_to "Link2", "/path2",  {class: 'nav_tab'}  %></li>
+            <li id = "nav_tab3"><%= link_to "Link3", "/path3",  {class: 'nav_tab'}  %></li>
+            <li id = "nav_tab4"><%= link_to "Link4", "/path4",  {class: 'nav_tab'}  %></li>
           </ul>
           <ul class="nav navbar-right col-md-4">
             <% if current_user %>
