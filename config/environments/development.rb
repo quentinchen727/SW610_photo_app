@@ -9,7 +9,7 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
   config.action_mailer.delivery_method = :smtp 
-  config.action_mailer.default_url_options = { :host => 'https://swe610-photo-app-jielin.c9users.io/'}
+  config.action_mailer.default_url_options = { :host => 'https://swe610project-jielin.c9users.io//'}
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
