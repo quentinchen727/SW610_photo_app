@@ -1,5 +1,15 @@
 <% if current_user %>
-<h3>Welcome: <%= current_user.email %></h3>
+<div class="container">
+
+        <!-- Jumbotron Header -->
+        <header class="jumbotron2">
+            <h1>Welcome!<%= current_user.email %>!</h1>
+            <p>It is time to upload some images</p>
+            <br><br>
+            <p><a class="btncss3" href="/images">Upload</a>
+            </p>
+        </header>
+</div>
 
 <% else %>
 <div class="jumbotron">
